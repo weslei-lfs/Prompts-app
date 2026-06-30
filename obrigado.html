@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obrigado! Seu download está pronto — 20 Prompts para Apps com IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0A0A0A;
+      --surface: #111111;
+      --border: #222222;
+      --accent: #C8FF00;
+      --accent-dim: rgba(200,255,0,0.12);
+      --text: #F0F0F0;
+      --muted: #888888;
+      --white: #ffffff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .glow {
+      position: fixed;
+      top: -150px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(200,255,0,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(200,255,0,0.2);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .check-wrap {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      border: 2px solid rgba(200,255,0,0.35);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.75rem;
+      animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .check-wrap svg { width: 32px; height: 32px; color: var(--accent); }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 span { color: var(--accent); }
+
+    .sub {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #0A0A0A;
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      width: 100%;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 0 40px rgba(200,255,0,0.2);
+      letter-spacing: 0.01em;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 60px rgba(200,255,0,0.35);
+    }
+
+    .download-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 2rem 0;
+    }
+
+    .what-next { text-align: left; }
+
+    .what-next-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .tip {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 0.85rem;
+    }
+
+    .tip-num {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      border: 1px solid rgba(200,255,0,0.25);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-family: 'Syne', sans-serif;
+    }
+
+    .tip-text { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .tip-text strong { color: var(--text); }
+
+    footer {
+      margin-top: 2.5rem;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="glow"></div>
+
+<div class="card">
+  <div class="check-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+  </div>
+
+  <h1>Pagamento confirmado! <span>Seu guia está aqui.</span></h1>
+  <p class="sub">Obrigado pela compra. Clique no botão abaixo para baixar seu PDF com os 20 prompts completos.</p>
+
+  <a href="20-prompts-apps-ia.pdf" download class="download-btn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    Baixar PDF — 20 Prompts para Apps com IA
+  </a>
+
+  <div class="divider"></div>
+
+  <div class="what-next">
+    <p class="what-next-title">Como usar agora</p>
+    <div class="tip">
+      <span class="tip-num">1</span>
+      <p class="tip-text"><strong>Abra o PDF</strong> e escolha o app que quer criar — são 20 categorias diferentes.</p>
+    </div>
+    <div class="tip">
+      <span class="tip-num">2</span>
+      <p class="tip-text"><strong>Copie o prompt completo</strong> do app escolhido.</p>
+    </div>
+    <div class="tip">
+      <span class="tip-num">3</span>
+      <p class="tip-text"><strong>Cole no Manus, Claude ou ChatGPT</strong> e aguarde a IA gerar seu app completo.</p>
+    </div>
+    <div class="tip">
+      <span class="tip-num">4</span>
+      <p class="tip-text"><strong>Repita</strong> para quantos apps quiser — o guia é seu para sempre.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2025 · 20 Prompts para Criar Apps com IA · Produto digital
+</footer>
+
+</body>
+</html>
